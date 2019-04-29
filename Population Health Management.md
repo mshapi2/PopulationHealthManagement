@@ -17,25 +17,25 @@ Healthcare Cost and Utilization Project (HCUP) is a group of healthcare database
 If you were to purchase HCUP data say for your state you can use this analysis and create the Population Health Report that I will demo for your data.
 A population health report helps the health care providers gain insight into the population they serve and get actionable intelligence. It sheds light on the quality of care being provided and allows monitoring and bench-marking of critical metrics. Using Power BI- I have created some example reports showing the types of summarization and tracking we can do with this kind of data. Some of the reports that I have created are described below. ..name all of them..I will show all these reports to you.
 
-##Patient Stats
+## Patient Stats
 
 ![](media/phm2.PNG)
 
-##Health Stats
+## Health Stats
 ![](media/phm3.PNG)
 
-##Length of stay report
+## Length of stay report
 
 ![](media/phm4.PNG)
 
-##Cost report
+## Cost report
 ![](media/phm5.PNG)
  
-##Intervention Profile
+## Intervention Profile
 
 ![](media/phm6.PNG)
 
 
-##Readmission Tracking
+## Readmission Tracking
 ![](media/phm7.PNG)
 
