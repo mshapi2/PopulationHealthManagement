@@ -15,7 +15,7 @@ A population health report helps the health care providers gain insight into the
 
 ##Patient Stats
 
-media/phm2.PNG
+![](media/phm2.PNG)
 
 ##Health Stats
 https://raw.githubusercontent.com/shaheeng/PopulationHealthManagement/master/media/phm3.PNG
