@@ -33,9 +33,7 @@ It is a known fact that the majority of total health care expenses come from a s
 ## Intervention Profile
 ![](media/phm6.PNG)
 
-Hospital readmissions has been identified as one of the key areas that has the potential for cost savings. Readmissions apart from being costly, also place patients at greater risk of complications and healthcare-associated infections. Nearly one in five hospital patients covered by Medicare are readmitted within 30 days, accounting for $15 billion a year.
-
-Timely intervention by identifying the right patients and causes for readmission can go a long way in reducing these costs. In this report, we identify the conditions that cause the most readmissions and related costs, broken down by payer and age. These insights can help decisions around which conditions to target to reduce readmission to maximize cost-reduction efforts. This report also examines prevalence of chronic conditions by age. These insights can help identify populations to target with interventions, thereby enhancing the quality of care quality.
+Hospital readmissions has been identified as one of the key areas that has the potential for cost savings. Readmissions apart from being costly, also place patients at greater risk of complications and healthcare-associated infections. Nearly one in five hospital patients covered by Medicare are readmitted within 30 days, accounting for $15 billion a year. Timely intervention by identifying the right patients and causes for readmission can go a long way in reducing these costs. In this report, we identify the conditions that cause the most readmissions and related costs, broken down by payer and age. These insights can help decisions around which conditions to target to reduce readmission to maximize cost-reduction efforts. This report also examines prevalence of chronic conditions by age. These insights can help identify populations to target with interventions, thereby enhancing the quality of care quality.
 
 ## Readmission Tracking
 ![](media/phm7.PNG)
