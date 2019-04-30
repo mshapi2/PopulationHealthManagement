@@ -11,7 +11,7 @@ For this Population Health Management report, I will be leveraging clinical and 
 ### About HCUP Data
 Healthcare Cost and Utilization Project ([HCUP](https://www.hcup-us.ahrq.gov/)) is a group of healthcare databases that contain the largest collection of longitudinal hospital care data in the United States. HCUP captures information extracted from administrative data (billing records) after a patient is discharged from the hospital, and it contains clinical and nonclinical information on all patients regardless of payer. The schema includes socioeconomic demographic data such as age, gender, income, zip code, payer type, information on admission and discharge, various diagnosis, procedures, charges, a total of about 600 columns. The Population Health Report presented here can be recreated for HCUP data for your state easily. The code to read HCUP data can be found in this notebook [here](https://github.com/Azure/cortana-intelligence-population-health-management/blob/master/Azure%20Data%20Lake/ManualDeploymentGuide/Model/ReadHCUPdata.ipynb) and a data sample can be found [here](https://github.com/Azure/cortana-intelligence-population-health-management/tree/master/Azure%20Data%20Lake/ManualDeploymentGuide/Model/SampleHCUPdata). 
 
-Using Power BI, I have created some example reports showing the types of summarization and tracking we can do with this kind of data. These reports shed light on the quality of care being provided and allows monitoring and bench-marking of critical metrics and provide actionable intelligence. Some of the reports that I have created are Patients Stats, Health Stats, Length of stay report, Cost report, Intervention Profile and Readmission Tracking. I will describe these reports briefly below. The Power BI report can be downloaded from [here](https://github.com/Azure/cortana-intelligence-population-health-management/tree/master/Azure%20Data%20Lake/ManualDeploymentGuide/Visualization) and instructions on how to put together and deploy from the ground up a population Health Management solution using Azure can be found [here](https://github.com/Azure/cortana-intelligence-population-health-management/tree/master/Azure%20Data%20Lake/ManualDeploymentGuide)
+Using Power BI, I have created some example reports showing the types of summarization and tracking we can do with this kind of data. These reports shed light on the quality of care being provided and allows monitoring and bench-marking of critical metrics and provide actionable intelligence. Some of the reports that I have created are Patients Stats, Health Stats, Length of stay report, Cost report, Intervention Profile and Readmission Tracking. I will describe these reports briefly below. The Power BI report can be downloaded from [here](https://github.com/Azure/cortana-intelligence-population-health-management/tree/master/Azure%20Data%20Lake/ManualDeploymentGuide/Visualization) and instructions on how to put together and deploy from the ground up a population Health Management solution with live Population Heath Reporting using Azure can be found [here](https://github.com/Azure/cortana-intelligence-population-health-management/tree/master/Azure%20Data%20Lake/ManualDeploymentGuide)
 
 ## Patient Stats
 ![](media/phm2.PNG)
@@ -23,36 +23,26 @@ In the Health stats report, I have created an overview of the medical condition 
 
 ## Length of stay report
 ![](media/phm4.PNG)
-With standardized payments hospitals are incentivized now more than ever to promote shorter stays. They are hard pressed to use resources more efficiently and find ways to accommodate more patients with the same volume of resources. In the length of stay report, we display the average length of stay by payer type, gender, age and procedures. We also look at variation in average length of stay by condition (diagnosis) and the associated average total charge. An insight into the conditions and demographic subgroups with the longest length of stay can help hospitals devise measures to reduce the average length of stay. A comparison across different hospitals can also help identify best practices or lack thereof around ensuring am optimal length of stay.
+With standardized payments hospitals are incentivized now more than ever to promote shorter stays. They are hard pressed to use resources more efficiently and find ways to accommodate more patients with the same volume of resources. In the length of stay report, we display the average length of stay by payer type, gender, age and procedures. We also look at variation in average length of stay by condition (diagnosis) and the associated average total charge. An insight into the conditions and demographic subgroups with the longest length of stay can help hospitals devise measures to reduce the average length of stay. A comparison across different hospitals can also help identify best practices or lack thereof around ensuring an optimal length of stay.
 
 ## Cost report
 ![](media/phm5.PNG)
-In the Cost report we get insights into how costs are distributed across different segments of the population (e.g. patient age, disease and payer type). We look at Total Charges by Payer and Gender as well as the total charge per day broken down by payer type. 
-It’s a known fact that The majority of total health care expenses come from a small percent of the total population. Insights like these can enable us to drill down and investigate the factors contributing to the majority of the costs.
+In the Cost report we get insights into how costs are distributed across different segments of the population (e.g. patient age, disease and payer type). We look at total charges by payer and gender as well as the total charge per day broken down by payer type. 
+It is a known fact that The majority of total health care expenses come from a small percent of the total population as is evident by the data (in the chart % of Admits by Cost). Insights like these can enable us to drill down and investigate the factors contributing to the majority of the costs. We also identify the most expensive health conditions and calculate mean hospital costs per day per visit and look at total cost per admit for different conditions. A comparison of cost per admit across different hospitals can be helpful in identifying why it costs more at one hospital as compared to another. Chronic diseases are the leading causes of death and disability in the United States and treating them incurs a huge economic burden. Readmissions are another source of increased hospital costs to the tune of billions of dollars. In the cost report we track total costs and also what proportion of total costs went towards treating patients with chronic disease. We also track costs associated with readmissions for each hospital.
 
-
-
-And its evident in the data. The xaxis is the amount billed and these are in bins..10k-20k, 20k-30k…100k-250k, 500k,700k) The length of the bar indicates the number of patients, the number of patients that were billed that amount.The color saturation of the bar indicates the % of total charges came from  these patients. If you look at this bar. 27% of the total charge came from just 10% of the patients..
-
-Insights like these can enable us to drill down and investigate the population contributing to the majority of the costs.
-We also identify the most expensive health conditions and calculate mean hospital costs per day per visit.
-
-Total cost by condition.
-
-The length of the bar indicates the total amount spent on treating patients with these condition…the most $$ were spent on treating patients for osteoarthritis followed by speticimia..The color of the bar indicates the av los for that condition.
-
-On the right we have the total cost per admit for different conditions. A comparison of cost per admit across different hospitals can be helpful in identifying why it costs more at one hospital as compared to another.
-
- 
-
-Chronic diseases as I mentioned earlier we know are the leading causes of death and disability in the United Statesref and treating them incurs a huge economic burdenref. Eighty-six percent of all health care spending in 2010 was spent on people with one or more chronic medical conditionsref. In this report, we look at total costs and also what proportion of total costs went towards treating patients with chronic disease. Reduction by even a few percent could result in millions of dollars in savings.
-
-Readmissions increase hospital costs by billions of dollars. According to the Agency for Healthcare Research and Quality, $41.3 billion was spent by hospitals between January and November 2011 to treat readmission patientsref. In this report, we look at the costs associated with readmissions for each hospital.
 ## Intervention Profile
-
 ![](media/phm6.PNG)
+Hospital readmissions has been identified as one of the key areas that has the potential for cost savings. Readmissions apart from being costly, also place patients at greater risk of complications and healthcare-associated infections. Nearly one in five hospital patients covered by Medicare are readmitted within 30 days, accounting for $15 billion a year.
 
+Timely intervention by identifying the right patients and causes for readmission can go a long way in reducing these costs. In this report, we identify the conditions that cause the most readmissions and related costs, broken down by payer and age. These insights can help decisions around which conditions to target to reduce readmission to maximize cost-reduction efforts. This report also examines prevalence of chronic conditions by age. These insights can help identify populations to target with interventions, thereby enhancing the quality of care quality.
 
 ## Readmission Tracking
 ![](media/phm7.PNG)
+Hospital readmission is a key measure for assessing the performance of the health care system. We have identified readmission here using the same "all-cause" definition as Medicare: if a patient is admitted to any hospital within 30 days after being discharged from an earlier hospitalization, for any reason (including unrelated medical issues), the hospital visit is considered a readmission.
+In this report we track readmission rate for conditions targeted by Medicare Hospital Readmissions Reduction Program (HRRP) viz. heart attack, heart failure, pneumonia, chronic obstructive pulmonary disease (COPD), elective hip or knee replacement, and coronary artery bypass graft (CABG) and some other common conditions at each hospital. There is also a metric file used for this visualization that contains the goals set by a hospital regarding their readmission rate. By regularly monitoring the readmission rate, hospitals can be proactive and empirical in their approaches to meeting their target. For example, if there is ongoing effort to improve discharge and care transition practices in order to reduce readmissions, hospitals can monitor progress on these efforts by tracking their metrics using this report.
 
+Above I presented some examples of Population Health Reporting for hospitals using in-patient data. The insights obtained from such reporting can help in managing the health of the population and help reduce cost with better health outcomes.
+
+
+Shaheen
+@Shaheen_Gauher
